@@ -48,6 +48,6 @@ Inclut : nettoyage, EDA, visualisations avancées, tendances annuelles et insigh
 
 ---
 
-## 👤 Auteur  
+## Auteur  
 **Wilfried YA. – WYN-Analytics**  
 _Data Analyst • Python • SQL • Power BI • Machine Learning_  
