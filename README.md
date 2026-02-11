@@ -19,7 +19,7 @@ Compétences mises en œuvre :
 - Optimisation de requêtes  
 - Création de vues & procédures stockées  
 
-📂 **Dossier :** [`sql/`](sql/)
+**Dossier :** [`sql/`](sql/)
 
 ---
 
