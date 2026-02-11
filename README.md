@@ -76,10 +76,10 @@ Inclut :
 - Évaluation de la performance des managers et équipes  
 - Dashboard exécutif orienté pilotage stratégique 
 
-**Projet :** [`projects/openmedic/`](projects/Call_Center_Performance_Analysis/)  
+**Projet :** [`projects/Call_Center_Performance_Analysis/`](projects/Call_Center_Performance_Analysis/)  
 
 ---
 
 ## Auteur  
-**Wilfried YA. – WYN-Analytics**  
+**Wilfried YA.  WYN-Analytics**  
 Data Analyst • SQL • Python • Excel • Power BI 
