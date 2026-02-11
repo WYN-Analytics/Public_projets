@@ -5,7 +5,25 @@ Ce dépôt regroupe l’ensemble de mon travail en **Python**, **Power BI**, **v
 
 ---
 
-##  1. Visualisations Python  
+## 1. Analyses & Modélisation SQL  
+
+Conception et exploitation de bases de données relationnelles pour l’analyse métier.
+
+Compétences mises en œuvre :  
+- Modélisation relationnelle (schémas en étoile / flocon)  
+- Création de bases PostgreSQL / SQL Server  
+- Jointures complexes (INNER, LEFT, RIGHT)  
+- Agrégations & Group By  
+- Fonctions analytiques (OVER, RANK, ROW_NUMBER)  
+- Sous-requêtes & CTE  
+- Optimisation de requêtes  
+- Création de vues & procédures stockées  
+
+📂 **Dossier :** [`sql/`](sql/)
+
+---
+
+##  2. Visualisations Python  
 Analyses exploratoires (EDA) et visualisations réalisées avec :  
 - `pandas`  
 - `matplotlib`  
@@ -16,7 +34,7 @@ Analyses exploratoires (EDA) et visualisations réalisées avec :
 
 ---
 
-##  2. Dashboards Power BI  
+##  3. Dashboards Power BI  
 Création de dashboards interactifs orientés métiers :  
 - KPIs  
 - storytelling data  
@@ -27,7 +45,7 @@ Création de dashboards interactifs orientés métiers :
 
 ---
 
-##  3. Projets Data complets  
+##  4. Projets Data complets  
 Projets incluant :  
 - nettoyage et préparation de données  
 - analyses statistiques  
