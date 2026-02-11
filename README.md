@@ -64,8 +64,22 @@ Inclut : nettoyage, EDA, visualisations avancées, tendances annuelles et insigh
 
 **Projet :** [`projects/openmedic/`](projects/openmedic/)  
 
+### 🔹 Call Center Performance Analysis  
+Analyse décisionnelle de la performance d’un centre d’appels externalisé (2018–2021).  
+
+Inclut :  
+- Nettoyage et transformation des données (Power Query)  
+- Modélisation relationnelle (schéma en étoile)  
+- Création de KPIs et mesures DAX  
+- Analyse du SLA (Service Level Agreement)  
+- Analyse des revenus par appel  
+- Évaluation de la performance des managers et équipes  
+- Dashboard exécutif orienté pilotage stratégique 
+
+**Projet :** [`projects/openmedic/`](projects/Call_Center_Performance_Analysis/)  
+
 ---
 
 ## Auteur  
 **Wilfried YA. – WYN-Analytics**  
-_Data Analyst • Python • SQL • Power BI • Machine Learning_  
+Data Analyst • SQL • Python • Excel • Power BI 
