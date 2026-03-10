@@ -1,73 +1,102 @@
-# BoutiqueFR Analytics
+# BoutiqueFR Analytics — SQL Server → Power BI
 
-## Objectif
+## 🎯 Objectif du projet
 
-Ce projet consiste à analyser les données d’un site e-commerce fictif afin de simuler une mission réelle de Data Analyst :
+Ce projet consiste à analyser les données d’un site e-commerce fictif afin de simuler une mission réelle de Data Analyst à partir de la base SQL Server BoutiqueFR:
 
-1. Vérification de la qualité des données
-2. Préparation d’une couche analytique SQL
-3. Création d’un modèle BI en étoile
-4. Construction d’un dashboard Power BI
+1. Contrôler la qualité et la cohérence des données
+2. Préparer une couche analytique en SQL
+3. Construire un modèle dimensionnel en étoile
+4. Alimenter un dashboard Power BI orienté décisionnel
 
 ---
 
 ## Technologies utilisées
 
-SQL Server (T-SQL)  
-Power BI  
-Modélisation dimensionnelle  
+- SQL Server (T-SQL)
+- Power BI
+- Modélisation dimensionnelle
 
 ---
 
-## Structure de la base de données
+##  Organisation de la base de données
 
-La base BoutiqueFR est organisée par domaines métier :
+La base BoutiqueFR est organisée par schémas métier :
 
 | Schéma | Description |
-|------|------|
-| client | informations clients |
-| reference | données de référence |
-| stock | catalogue produits et stocks |
-| vente | commandes, paiements et logistique |
+|--------|-------------|
+| `client` | données clients, adresses, avis |
+| `reference` | catégories et transporteurs |
+| `stock` | produits et niveaux de stock |
+| `vente` | commandes, lignes de commande, paiements, expéditions, coupons |
 
 ---
 
-##  Questions business
+##  Tables utilisées
+
+### Schéma client
+- client.clients
+- client.adresses
+- client.avis
+
+### Schéma reference
+- reference.categories
+- reference.transporteurs
+
+### Schéma stock
+- stock.produits
+- stock.stocks
+
+### Schéma vente
+- vente.commandes
+- vente.lignes_commande
+- vente.paiements
+- vente.expeditions
+- vente.coupons
+
+---
+
+## Problématiques business traitées
 
 - Quel est le chiffre d’affaires total ?
-- Combien de commandes sont réalisées ?
+- Combien de commandes ont été passées ?
 - Quel est le panier moyen ?
-- Quels produits génèrent le plus de ventes ?
-- Quels transporteurs sont les plus utilisés ?
-- Quel est l’impact des coupons promotionnels ?
+- Quels produits et catégories performent le mieux ?
+- Quelle est la part des commandes utilisant un coupon ?
+- Quels modes de paiement sont les plus utilisés ?
+- Quels transporteurs sont les plus sollicités ?
 - Quels produits présentent un risque de rupture de stock ?
 
 ---
 
-##  Structure SQL
+##  Structure du projet
 
-- Data Quality checks
-- Création de vues analytiques
-- Construction d’un modèle BI
-- Calcul de KPIs
+BoutiqueFR_Analytics/
+│
+├── 1_data/
+│   ├── schema_diagram.png
+│   └── data_dictionary.md
+│
+├── 2_sql/
+│   ├── 01_quality_checks.sql
+│   ├── 02_analytics_views.sql
+│   ├── 03_star_schema.sql
+│   └── 04_kpi_queries.sql
+│
+├── 3_powerbi/
+│   ├── dax_measures.md
+│   └── dashboard_structure.md
+│
+├── 4_docs/
+│   ├── business_questions.md
+│   ├── methodology.md
+│   └── insights_recommendations.md
+│
+└── README.md
 
 ---
 
-##  Dashboard Power BI
-
-Le dashboard permet de suivre :
-
-- Chiffre d’affaires
-- Nombre de commandes
-- Panier moyen
-- Top produits
-- Analyse logistique
-- Analyse des paiements
-- Risque de rupture de stock
-
----
-
-## Auteur
+## Auteur 
 
 **Wilfried YA. WYN-Analytics**  
-Data Analyst • Python • SQL • Power BI • Machine Learning
+Data Analyst • SQL • Python • Excel • Power BI 
