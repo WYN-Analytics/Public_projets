@@ -1,98 +1,131 @@
-# BoutiqueFR Analytics — SQL Server → Power BI
+# BoutiqueFR Analytics — Analyse e-commerce (SQL Server → Power BI)
 
-## 🎯 Objectif du projet
+## 🎯 Objectif
 
-Ce projet consiste à analyser les données d’un site e-commerce fictif afin de simuler une mission réelle de Data Analyst à partir de la base SQL Server BoutiqueFR:
+Ce projet consiste à analyser les données d’un site e-commerce fictif afin de simuler une mission réelle de Data Analyst.
 
-1. Contrôler la qualité et la cohérence des données
-2. Préparer une couche analytique en SQL
-3. Construire un modèle dimensionnel en étoile
-4. Alimenter un dashboard Power BI orienté décisionnel
+À partir de la base SQL Server BoutiqueFR, le projet couvre :
+
+1. le contrôle qualité des données,
+2. la création de vues analytiques,
+3. la modélisation BI en schéma étoile,
+4. la préparation d’un dashboard Power BI.
 
 ---
 
-## Technologies utilisées
+##  Technologies utilisées
 
 - SQL Server (T-SQL)
 - Power BI
 - Modélisation dimensionnelle
+- Analyse de données
 
 ---
 
-##  Organisation de la base de données
+##  Organisation de la base
 
 La base BoutiqueFR est organisée par schémas métier :
 
 | Schéma | Description |
 |--------|-------------|
-| `client` | données clients, adresses, avis |
-| `reference` | catégories et transporteurs |
-| `stock` | produits et niveaux de stock |
+| `client` | clients, adresses, avis |
+| `reference` | catégories, transporteurs |
+| `stock` | produits, stocks |
 | `vente` | commandes, lignes de commande, paiements, expéditions, coupons |
 
 ---
 
-##  Tables utilisées
-
-### Schéma client
-- client.clients
-- client.adresses
-- client.avis
-
-### Schéma reference
-- reference.categories
-- reference.transporteurs
-
-### Schéma stock
-- stock.produits
-- stock.stocks
-
-### Schéma vente
-- vente.commandes
-- vente.lignes_commande
-- vente.paiements
-- vente.expeditions
-- vente.coupons
-
----
-
-## Problématiques business traitées
+##  Questions métier analysées
 
 - Quel est le chiffre d’affaires total ?
 - Combien de commandes ont été passées ?
 - Quel est le panier moyen ?
-- Quels produits et catégories performent le mieux ?
-- Quelle est la part des commandes utilisant un coupon ?
-- Quels modes de paiement sont les plus utilisés ?
-- Quels transporteurs sont les plus sollicités ?
+- Quels produits se vendent le mieux ?
+- Quels transporteurs sont les plus utilisés ?
 - Quels produits présentent un risque de rupture de stock ?
+- Quelle est la répartition des paiements par statut et par mode ?
+- Quelle est la part des commandes avec coupon ?
 
----
 
 ##  Structure du projet
 
 BoutiqueFR_Analytics/
 │
-├── 1_data/
-│   ├── schema_diagram.png
-│   └── data_dictionary.md
+├── 1_donnees/
+│   ├── schema_base_de_donnees.png
+│   └── dictionnaire_des_donnees.md
 │
 ├── 2_sql/
-│   ├── 01_quality_checks.sql
-│   ├── 02_analytics_views.sql
-│   ├── 03_star_schema.sql
-│   └── 04_kpi_queries.sql
+│   ├── 01_controle_qualite_donnees.sql
+│   ├── 02_vues_analytiques.sql
+│   ├── 03_modele_bi_schema_etoile.sql
+│   └── 04_requetes_kpi.sql
 │
 ├── 3_powerbi/
-│   ├── dax_measures.md
-│   └── dashboard_structure.md
+│   ├── mesures_dax.md
+│   └── structure_dashboard.md
 │
-├── 4_docs/
-│   ├── Questions_business.md
-│   ├── Methodologie.md
-│   └── Insights_recommendations.md
+├── 4_documentation/
+│   ├── questions_business.md
+│   ├── methodologie_analyse.md
+│   └── insights_et_recommandations.md
 │
 └── README.md
+
+##  Travaux réalisés
+
+### 1. Contrôle qualité des données
+Des requêtes SQL ont été construites pour :
+- compter les volumes par table,
+- détecter les clés orphelines,
+- identifier les incohérences financières,
+- repérer les valeurs négatives ou nulles critiques.
+
+### 2. Création d’une couche analytique
+Des vues SQL ont été créées pour :
+- enrichir les produits avec leurs catégories,
+- enrichir les lignes de vente avec les informations de commande,
+- préparer des jeux de données propres pour la BI.
+
+### 3. Modélisation BI
+Un schéma `bi` a été créé avec :
+- des dimensions (`Dim_Client`, `Dim_Produit`, `Dim_Date`, `Dim_Transporteur`, `Dim_Coupon`),
+- des tables de faits (`Fact_Ventes`, `Fact_Expeditions`, `Fact_Paiements`, `Fact_Stock`).
+
+### 4. Dashboard Power BI
+Le dashboard a été conçu pour permettre de suivre :
+- le chiffre d’affaires,
+- les commandes,
+- les produits et catégories,
+- les paiements,
+- la logistique,
+- les alertes stock.
+
+---
+
+## Pages du dashboard Power BI
+
+### Page 1 — Sales Overview
+- CA TTC
+- Nombre de commandes
+- Panier moyen
+- Nombre de clients
+- Évolution mensuelle du CA
+- CA par catégorie
+- Top produits
+
+### Page 2 — Produits & Clients
+- Produits les plus vendus
+- Répartition par marque
+- Top clients
+- Utilisation des coupons
+
+### Page 3 — Logistique & Paiements
+- Répartition des paiements par statut
+- Répartition par mode de paiement
+- Performance des transporteurs
+- Frais de port moyens
+- Produits en alerte stock
 
 ---
 
