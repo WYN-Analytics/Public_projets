@@ -78,8 +78,39 @@ Inclut :
 
 **Projet :** [`projects/Call_Center_Performance_Analysis/`](projects/Call_Center_Performance_Analysis/)  
 
+
+### 🔹 BoutiqueFR – E-commerce Sales & Operations Analytics (SQL Server → Power BI)
+
+Projet d’analyse complète d’une base e-commerce simulée afin de démontrer un workflow Data Analyst: contrôle qualité des données, modélisation analytique SQL, création d’un modèle en étoile et réalisation d’un dashboard décisionnel Power BI.
+
+Le projet met en pratique les compétences suivantes :
+
+- Data Quality & Data Validation en SQL
+- Création de vues analytiques
+- Modélisation dimensionnelle (Star Schema)
+- Analyse des ventes et de la logistique
+- Création de KPIs business
+- Construction d’un dashboard Power BI
+
+Analyses réalisées :
+
+- Analyse du chiffre d’affaires et des commandes
+- Analyse des performances produits et catégories
+- Analyse de l’utilisation des coupons promotionnels
+- Analyse des paiements et des statuts de transaction
+- Analyse logistique (transporteurs, frais de port, délais)
+- Détection des risques de rupture de stock
+
+Technologies utilisées :
+
+- SQL Server (T-SQL)
+- Power BI
+- Modélisation BI (Star Schema)
+
+**Projet :** [`projects/BoutiqueFR_Analytics/`](projects/BoutiqueFR_Analytics/)
+
 ---
 
 ## Auteur  
-**Wilfried YA.  WYN-Analytics**  
+**Wilfried YA. WYN-Analytics**  
 Data Analyst • SQL • Python • Excel • Power BI 
