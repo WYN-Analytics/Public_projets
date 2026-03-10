@@ -88,9 +88,9 @@ BoutiqueFR_Analytics/
 │   └── dashboard_structure.md
 │
 ├── 4_docs/
-│   ├── business_questions.md
-│   ├── methodology.md
-│   └── insights_recommendations.md
+│   ├── Questions_business.md
+│   ├── Methodologie.md
+│   └── Insights_recommendations.md
 │
 └── README.md
 
