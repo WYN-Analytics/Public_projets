@@ -64,7 +64,6 @@ Les notebooks sont pensés pour être exécutés dans **Jupyter Notebook** ou **
 
 ---
 
-## Auteur
-
-**Wilfried YA. – WYN-Analytics**  
-_Data Analyst • Python • SQL • Power BI • Machine Learning_  
+## Auteur  
+**Wilfried YA. WYN-Analytics**  
+Data Analyst • SQL • Python • Excel • Power BI 
