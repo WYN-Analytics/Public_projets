@@ -58,13 +58,13 @@ Projets incluant :
 
 ---
 
-### 🔹 OpenMedic (2019–2024) – Analyse de la consommation d’antibiotiques  
+###  OpenMedic (2019–2024) – Analyse de la consommation d’antibiotiques  
 Analyse complète de la consommation d’antibiotiques en France à partir des données OpenMedic.  
 Inclut : nettoyage, EDA, visualisations avancées, tendances annuelles et insights métiers.
 
 **Projet :** [`projects/openmedic/`](projects/openmedic/)  
 
-### 🔹 Call Center Performance Analysis  
+###  Call Center Performance Analysis  
 Analyse décisionnelle de la performance d’un centre d’appels externalisé (2018–2021).  
 
 Inclut :  
@@ -79,36 +79,34 @@ Inclut :
 **Projet :** [`projects/Call_Center_Performance_Analysis/`](projects/Call_Center_Performance_Analysis/)  
 
 
-### 🔹 BoutiqueFR – E-commerce Sales & Operations Analytics (SQL Server → Power BI)
+### 🔹 BoutiqueFR Analytics – Analyse e-commerce de bout en bout (SQL Server → Power BI)
 
-Projet d’analyse complète d’une base e-commerce simulée afin de démontrer un workflow Data Analyst: contrôle qualité des données, modélisation analytique SQL, création d’un modèle en étoile et réalisation d’un dashboard décisionnel Power BI.
+Projet d’analyse décisionnelle construit à partir d’une base e-commerce fictive BoutiqueFR, dans le but de simuler une mission réelle de Data Analyst en entreprise.
 
-Le projet met en pratique les compétences suivantes :
+Le projet couvre l’ensemble de la chaîne analytique :
 
-- Data Quality & Data Validation en SQL
+- Contrôle qualité des données en SQL
+- Vérification de cohérence métier
 - Création de vues analytiques
 - Modélisation dimensionnelle (Star Schema)
-- Analyse des ventes et de la logistique
+- Construction d’un modèle BI prêt pour Power BI
 - Création de KPIs business
-- Construction d’un dashboard Power BI
+- Conception d’un dashboard décisionnel
 
 Analyses réalisées :
-
-- Analyse du chiffre d’affaires et des commandes
-- Analyse des performances produits et catégories
+- Analyse du chiffre d’affaires et de l’activité commerciale
+- Analyse des produits et catégories les plus performants
 - Analyse de l’utilisation des coupons promotionnels
 - Analyse des paiements et des statuts de transaction
-- Analyse logistique (transporteurs, frais de port, délais)
-- Détection des risques de rupture de stock
+- Analyse logistique (transporteurs, frais de port, délais estimés)
+- Détection des produits en risque de rupture de stock
 
 Technologies utilisées :
-
 - SQL Server (T-SQL)
 - Power BI
 - Modélisation BI (Star Schema)
 
-**Projet :** [`projects/BoutiqueFR_Analytics/`](projects/BoutiqueFR_Analytics/)
-
+Projet : [`projects/BoutiqueFR_Analytics/`](projects/BoutiqueFR_Analytics/)
 ---
 
 ## Auteur  
