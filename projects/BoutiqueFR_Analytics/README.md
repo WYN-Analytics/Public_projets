@@ -1,6 +1,6 @@
-# BoutiqueFR Analytics — Analyse e-commerce (SQL Server → Power BI)
+# BoutiqueFR Analytics : Analyse e-commerce (SQL Server ---> Power BI)
 
-## 🎯 Objectif
+##  Objectif
 
 Ce projet consiste à analyser les données d’un site e-commerce fictif afin de simuler une mission réelle de Data Analyst.
 
@@ -106,7 +106,7 @@ Le dashboard final permet de suivre :
 
 ## Pages du dashboard Power BI
 
-### Page 1 — Vue d’ensemble commerciale
+### Page 1 : Vue d’ensemble commerciale
 - CA TTC
 - Nombre de commandes
 - Panier moyen
@@ -115,13 +115,13 @@ Le dashboard final permet de suivre :
 - CA par catégorie
 - Top produits
 
-### Page 2 — Produits & Clients
+### Page 2 : Produits & Clients
 - Produits les plus vendus
 - Répartition par marque
 - Top clients
 - Utilisation des coupons
 
-### Page 3 — Logistique & Paiements
+### Page 3 : Logistique & Paiements
 - Répartition des paiements par statut
 - Répartition par mode de paiement
 - Performance des transporteurs
@@ -132,5 +132,5 @@ Le dashboard final permet de suivre :
 
 ## Auteur 
 
-**Wilfried YA. WYN-Analytics**  
+**Wilfried YA. WYN Analytics**  
 Data Analyst • SQL • Python • Excel • Power BI 
