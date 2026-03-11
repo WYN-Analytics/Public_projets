@@ -1,11 +1,11 @@
-# Portfolio – WYN-Analytics  
+# Portfolio WYN Analytics  
 
 Bienvenue dans mon espace professionnel dédié aux visualisations, analyses et projets Data.  
 Ce dépôt regroupe l’ensemble de mon travail en **SQL**, **Python**, **Power BI**, **visualisation**, et **analyse de données**.
 
 ---
 
-## 1. Analyses & Modélisation SQL  
+## 1. Analyses & Modélisation en SQL  
 
 Conception et exploitation de bases de données relationnelles pour l’analyse métier.
 
@@ -23,8 +23,8 @@ Compétences mises en œuvre :
 
 ---
 
-##  2. Visualisations Python  
-Analyses exploratoires (EDA) et visualisations réalisées avec :  
+##  2. Analyses exploratoires, Data cleaning, Visualisations en Python  
+Analyses exploratoires (EDA), data cleaning et visualisations réalisées avec :  
 - `pandas`  
 - `matplotlib`  
 - `seaborn`  
@@ -58,7 +58,7 @@ Projets incluant :
 
 ---
 
-###  OpenMedic (2019–2024) – Analyse de la consommation d’antibiotiques  
+###  OpenMedic (2019–2024), Analyse de la consommation d’antibiotiques  
 Analyse complète de la consommation d’antibiotiques en France à partir des données OpenMedic.  
 Inclut : nettoyage, EDA, visualisations avancées, tendances annuelles et insights métiers.
 
@@ -79,7 +79,7 @@ Inclut :
 **Projet :** [`projects/Call_Center_Performance_Analysis/`](projects/Call_Center_Performance_Analysis/)  
 
 
-### BoutiqueFR Analytics – Analyse e-commerce de bout en bout (SQL Server → Power BI)
+### BoutiqueFR Analytics, Analyse e-commerce de bout en bout (SQL Server ---> Power BI)
 
 Projet d’analyse décisionnelle construit à partir d’une base e-commerce fictive BoutiqueFR, dans le but de simuler une mission réelle de Data Analyst en entreprise.
 
@@ -111,5 +111,5 @@ Technologies utilisées :
 ---
 
 ## Auteur  
-**Wilfried YA. WYN-Analytics**  
+**Wilfried YA. WYN Analytics**  
 Data Analyst • SQL • Python • Excel • Power BI 
