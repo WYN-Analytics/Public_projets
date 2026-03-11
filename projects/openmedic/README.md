@@ -1,4 +1,4 @@
-#  Projet OpenMedic 2019–2024  
+#  Projet OpenMedic 2019 - 2024  
 Analyse de la consommation d’antibiotiques en France à partir des données **OpenMedic** (Assurance Maladie).
 
 Ce projet combine :
@@ -65,5 +65,5 @@ Les notebooks sont pensés pour être exécutés dans **Jupyter Notebook** ou **
 ---
 
 ## Auteur  
-**Wilfried YA. WYN-Analytics**  
+**Wilfried YA. WYN Analytics**  
 Data Analyst • SQL • Python • Excel • Power BI 
