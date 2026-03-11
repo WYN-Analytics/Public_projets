@@ -72,28 +72,29 @@ BoutiqueFR_Analytics/
 │
 └── README.md
 
-##  Travaux réalisés
+## Travaux réalisés
 
 ### 1. Contrôle qualité des données
 Des requêtes SQL ont été construites pour :
 - compter les volumes par table,
-- détecter les clés orphelines,
-- identifier les incohérences financières,
-- repérer les valeurs négatives ou nulles critiques.
+- détecter les doublons potentiels,
+- identifier les clés orphelines,
+- repérer les incohérences financières,
+- contrôler les valeurs nulles critiques et les valeurs impossibles.
 
 ### 2. Création d’une couche analytique
-Des vues SQL ont été créées pour :
-- enrichir les produits avec leurs catégories,
-- enrichir les lignes de vente avec les informations de commande,
-- préparer des jeux de données propres pour la BI.
+Des vues SQL ont été créées dans le schéma `analytics` afin de :
+- simplifier les jointures,
+- enrichir les données métier,
+- préparer proprement les tables destinées à la BI.
 
 ### 3. Modélisation BI
 Un schéma `bi` a été créé avec :
-- des dimensions (`Dim_Client`, `Dim_Produit`, `Dim_Date`, `Dim_Transporteur`, `Dim_Coupon`),
+- des dimensions (`Dim_Client`, `Dim_Produit`, `Dim_Date`, etc.),
 - des tables de faits (`Fact_Ventes`, `Fact_Expeditions`, `Fact_Paiements`, `Fact_Stock`).
 
 ### 4. Dashboard Power BI
-Le dashboard a été conçu pour permettre de suivre :
+Le dashboard final permet de suivre :
 - le chiffre d’affaires,
 - les commandes,
 - les produits et catégories,
@@ -105,7 +106,7 @@ Le dashboard a été conçu pour permettre de suivre :
 
 ## Pages du dashboard Power BI
 
-### Page 1 — Sales Overview
+### Page 1 — Vue d’ensemble commerciale
 - CA TTC
 - Nombre de commandes
 - Panier moyen
