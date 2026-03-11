@@ -79,7 +79,7 @@ Inclut :
 **Projet :** [`projects/Call_Center_Performance_Analysis/`](projects/Call_Center_Performance_Analysis/)  
 
 
-### 🔹 BoutiqueFR Analytics – Analyse e-commerce de bout en bout (SQL Server → Power BI)
+### BoutiqueFR Analytics – Analyse e-commerce de bout en bout (SQL Server → Power BI)
 
 Projet d’analyse décisionnelle construit à partir d’une base e-commerce fictive BoutiqueFR, dans le but de simuler une mission réelle de Data Analyst en entreprise.
 
@@ -106,7 +106,7 @@ Technologies utilisées :
 - Power BI
 - Modélisation BI (Star Schema)
 
-Projet : [`projects/BoutiqueFR_Analytics/`](projects/BoutiqueFR_Analytics/)
+**Projet** : [`projects/BoutiqueFR_Analytics/`](projects/BoutiqueFR_Analytics/)
 ---
 
 ## Auteur  
