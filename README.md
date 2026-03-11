@@ -1,7 +1,7 @@
 # Portfolio – WYN-Analytics  
 
 Bienvenue dans mon espace professionnel dédié aux visualisations, analyses et projets Data.  
-Ce dépôt regroupe l’ensemble de mon travail en **Python**, **Power BI**, **visualisation**, et **analyse de données**.
+Ce dépôt regroupe l’ensemble de mon travail en **SQL**, **Python**, **Power BI**, **visualisation**, et **analyse de données**.
 
 ---
 
