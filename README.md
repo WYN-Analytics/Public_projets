@@ -107,6 +107,7 @@ Technologies utilisées :
 - Modélisation BI (Star Schema)
 
 **Projet** : [`projects/BoutiqueFR_Analytics/`](projects/BoutiqueFR_Analytics/)
+
 ---
 
 ## Auteur  
