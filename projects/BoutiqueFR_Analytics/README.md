@@ -52,7 +52,7 @@ La base BoutiqueFR est organisée par schémas métier :
 BoutiqueFR_Analytics/
 │
 ├── 1_donnees/
-│   ├── schema_base_de_donnees.png
+│   ├── base_de_donnees_BoutiqueFR_full.sql
 │   └── dictionnaire_des_donnees.md
 │
 ├── 2_sql/
