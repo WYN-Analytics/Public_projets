@@ -88,7 +88,7 @@ Le projet couvre l’ensemble de la chaîne analytique :
 - Contrôle qualité des données en SQL
 - Vérification de cohérence métier
 - Création de vues analytiques
-- Modélisation dimensionnelle (Star Schema)
+- Modélisation BI basée sur un **Star Schema étendu**, avec une table de faits principale (ventes) et plusieurs tables de faits complémentaires (paiements, expéditions, stock).
 - Construction d’un modèle BI prêt pour Power BI
 - Création de KPIs business
 - Conception d’un dashboard décisionnel
