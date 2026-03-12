@@ -10,11 +10,11 @@ Ce dépôt regroupe l’ensemble de mon travail en **SQL**, **Python**, **Power 
 Conception et exploitation de bases de données relationnelles pour l’analyse métier.
 
 Compétences mises en œuvre :  
-- Modélisation relationnelle (schémas en étoile / flocon)  
-- Création de bases PostgreSQL / SQL Server  
+- Modélisation relationnelle (schémas en étoile / Snowflake)  
+- Création de bases SQL Server et PostgreSQL  
 - Jointures complexes (INNER, LEFT, RIGHT)  
 - Agrégations & Group By  
-- Fonctions analytiques (OVER, RANK, ROW_NUMBER)  
+- Fonctions analytiques
 - Sous-requêtes & CTE  
 - Optimisation de requêtes  
 - Création de vues & procédures stockées  
