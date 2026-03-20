@@ -58,27 +58,6 @@ Projets incluant :
 
 ---
 
-###  OpenMedic (2019–2024), Analyse de la consommation d’antibiotiques  
-Analyse complète de la consommation d’antibiotiques en France à partir des données OpenMedic.  
-Inclut : nettoyage, EDA, visualisations avancées, tendances annuelles et insights métiers.
-
-**Projet :** [`projects/openmedic/`](projects/openmedic/)  
-
-###  Call Center Performance Analysis  
-Analyse décisionnelle de la performance d’un centre d’appels externalisé (2018–2021).  
-
-Inclut :  
-- Nettoyage et transformation des données (Power Query)  
-- Modélisation relationnelle (schéma en étoile)  
-- Création de KPIs et mesures DAX  
-- Analyse du SLA (Service Level Agreement)  
-- Analyse des revenus par appel  
-- Évaluation de la performance des managers et équipes  
-- Dashboard exécutif orienté pilotage stratégique 
-
-**Projet :** [`projects/Call_Center_Performance_Analysis/`](projects/Call_Center_Performance_Analysis/)  
-
-
 ### BoutiqueFR Analytics, Analyse e-commerce de bout en bout (SQL Server ---> Power BI)
 
 Projet d’analyse décisionnelle construit à partir d’une base e-commerce fictive BoutiqueFR, dans le but de simuler une mission réelle de Data Analyst en entreprise.
@@ -107,6 +86,26 @@ Technologies utilisées :
 - Modélisation BI (Star Schema)
 
 **Projet** : [`projects/BoutiqueFR_Analytics/`](projects/BoutiqueFR_Analytics/)
+
+###  OpenMedic (2019–2024), Analyse de la consommation d’antibiotiques  
+Analyse complète de la consommation d’antibiotiques en France à partir des données OpenMedic.  
+Inclut : nettoyage, EDA, visualisations avancées, tendances annuelles et insights métiers.
+
+**Projet :** [`projects/openmedic/`](projects/openmedic/)  
+
+###  Call Center Performance Analysis  
+Analyse décisionnelle de la performance d’un centre d’appels externalisé (2018–2021).  
+
+Inclut :  
+- Nettoyage et transformation des données (Power Query)  
+- Modélisation relationnelle (schéma en étoile)  
+- Création de KPIs et mesures DAX  
+- Analyse du SLA (Service Level Agreement)  
+- Analyse des revenus par appel  
+- Évaluation de la performance des managers et équipes  
+- Dashboard exécutif orienté pilotage stratégique 
+
+**Projet :** [`projects/Call_Center_Performance_Analysis/`](projects/Call_Center_Performance_Analysis/)  
 
 ---
 
