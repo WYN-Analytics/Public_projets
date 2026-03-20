@@ -62,14 +62,18 @@ BoutiqueFR_Analytics/
 │   └── 04_requetes_kpi.sql
 │
 ├── 3_powerbi/
-│   ├── mesures_dax.md
-│   └── structure_dashboard.md
+│   ├── BoutiqueFR.pbix
+│   └── README.md
 │
 ├── 4_documentation/
 │   ├── questions_business.md
 │   ├── methodologie_analyse.md
 │   └── insights_et_recommandations.md
-│
+├── 5_images/
+│   ├── 01-Vue_onglets.png
+│   ├── 02-Vue_d_ensemble_commerciale.png
+│   ├── 03-Produits_et_Clients.png
+│   └── 04-Logistique_et_Paiements.png
 └── README.md
 
 ## Travaux réalisés
@@ -104,29 +108,44 @@ Le dashboard final permet de suivre :
 
 ---
 
-## Pages du dashboard Power BI
+##  Structure du dashboard
 
-### Page 1 : Vue d’ensemble commerciale
-- CA TTC
+###  Page 1 : Vue d’ensemble commerciale
+- Chiffre d’affaires
 - Nombre de commandes
-- Panier moyen
 - Nombre de clients
+- Panier moyen
+- Croissance du CA
 - Évolution mensuelle du CA
-- CA par catégorie
+- Répartition du CA par catégorie
 - Top produits
 
+**Insight clé :**
+Analyse globale des performances avec identification des tendances de croissance ou de baisse.
+
+---
+
 ### Page 2 : Produits & Clients
-- Produits les plus vendus
-- Répartition par marque
+- Top produits les plus vendus
+- Chiffre d’affaires par marque
 - Top clients
-- Utilisation des coupons
+- Panier moyen par catégorie
+- Évolution du nombre de clients
+
+**Insight clé :**
+Identification des leviers de performance (produits, marques, clients à forte valeur).
+
+---
 
 ### Page 3 : Logistique & Paiements
-- Répartition des paiements par statut
-- Répartition par mode de paiement
-- Performance des transporteurs
-- Frais de port moyens
-- Produits en alerte stock
+- Répartition des paiements (statut)
+- Répartition du CA par mode de paiement
+- Performance des transporteurs (délais)
+- Produits en alerte de stock
+- KPI logistiques (expéditions, frais de port)
+
+**Insight clé :**
+Analyse opérationnelle permettant d’identifier les risques (ruptures, paiements refusés, délais).
 
 ---
 
