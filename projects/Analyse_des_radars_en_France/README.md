@@ -104,35 +104,30 @@ Analyse_des_radars_en_France
 
 ---
 
-## Structure du dashboard
+##  Structure du dashboard
 
 ### Page 1 - Vue globale
-- Nombre total de radars  
-- Nombre de communes concernées  
-- Nombre de départements concernés  
-- Nombre de régions concernées  
-- VMA moyenne  
+- KPI : radars, communes, départements, régions
+- Carte des radars
+- Radars par région
 
 ### Page 2 - Analyse géographique
-- Radars par région  
-- Part des radars par région  
-- Radars par département  
-- Top communes les plus équipées  
+- Radars par département
+- Top 10 départements
+- Radars pour 100 000 habitants
 
-### Page 3 - Analyse des radars
-- Répartition par type de radar  
-- Répartition par VMA  
-- Nombre moyen de radars par commune  
+### Page 3 - Typologie
+- Types de radars
+- Radars feu rouge / vitesse moyenne
+- Analyse VMA
 
-### Page 4 - Analyse temporelle
-- Nombre de radars par année  
-- Analyse des installations récentes  
-- Comparaison des évolutions  
+### Page 4 - Évolution
+- Radars par année
+- Courbe temporelle
 
-### Page 5 - Analyse population
-- Population réelle corrigée  
-- Radars pour 100 000 habitants  
-- Lecture territoriale relative  
+### Page 5 - Qualité des données
+- Taux de VMA manquante
+- Message qualité
 
 ---
 
