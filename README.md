@@ -58,6 +58,55 @@ Projets incluant :
 
 ---
 
+
+### Analyse des radars automatiques en France (SQL Server → Power BI)
+
+Projet d’analyse décisionnelle basé sur les données open data des radars fixes en France (data.gouv), enrichies avec des données géographiques des communes.
+L’objectif est de simuler une mission de Data Analyst dans un contexte de **pilotage de la sécurité routière et de la couverture territoriale des dispositifs de contrôle**.
+Le projet couvre l’ensemble de la chaîne analytique :
+
+- Import et structuration des données brutes (radars + communes)  
+- Nettoyage et normalisation des données (types, dates, coordonnées)  
+- Enrichissement des données en associant chaque radar à une commune à partir de ses coordonnées GPS (coordonnées GPS -> commune la plus proche)  
+- Création d’une table analytique consolidée  
+- Construction de requêtes analytiques métier (répartition, tendances, indicateurs)  
+- Création de vues SQL dédiées à Power BI  
+- Modélisation BI et conception d’un dashboard décisionnel  
+
+## Analyses réalisées
+
+- Analyse de la répartition des radars par région, département et commune  
+- Analyse des types de radars (vitesse, feu rouge, vitesse moyenne, etc.)  
+- Analyse des vitesses maximales autorisées (VMA) contrôlées  
+- Analyse temporelle des mises en service des radars  
+- Identification des zones les plus équipées  
+- Calcul d’indicateurs de densité (ex : radars par zone géographique)  
+- Exploration de la couverture territoriale des dispositifs de contrôle  
+
+## Technologies utilisées
+
+- SQL Server (T-SQL)  
+- Power BI  
+- Excel
+
+## Limites du projet
+
+- Le fichier source des radars ne contient pas directement la commune  
+- L’enrichissement repose sur une **approximation géographique (commune la plus proche)**  
+- Certaines valeurs sont manquantes ou non exploitables (ex : VMA)  
+- Les correspondances géographiques ne sont pas garanties à 100 %
+
+## Compétences démontrées
+
+- Manipulation de données open data  
+- Nettoyage de données réelles imparfaites  
+- Enrichissement des données via une logique de rapprochement géographique  
+- Construction d’un flux de transformation des données (import, nettoyage, enrichissement, analyse)
+- Transformation de données brutes en outil décisionnel  
+
+
+**Projet :** [`projects/Analyse_des_radars_en_France/`](projects/Analyse_des_radars_en_France/)
+
 ### BoutiqueFR Analytics, Analyse e-commerce de bout en bout (SQL Server ---> Power BI)
 
 Projet d’analyse décisionnelle construit à partir d’une base e-commerce fictive BoutiqueFR, dans le but de simuler une mission réelle de Data Analyst en entreprise.
