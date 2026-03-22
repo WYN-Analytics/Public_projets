@@ -59,10 +59,11 @@ Projets incluant :
 ---
 
 
-### Analyse des radars automatiques en France (SQL Server → Power BI)
+## Analyse des radars automatiques en France (SQL Server → Power BI)
 
 Projet d’analyse décisionnelle basé sur les données open data des radars fixes en France (data.gouv), enrichies avec des données géographiques des communes.
 L’objectif est de simuler une mission de Data Analyst dans un contexte de **pilotage de la sécurité routière et de la couverture territoriale des dispositifs de contrôle**.
+
 Le projet couvre l’ensemble de la chaîne analytique :
 
 - Import et structuration des données brutes (radars + communes)  
@@ -73,7 +74,7 @@ Le projet couvre l’ensemble de la chaîne analytique :
 - Création de vues SQL dédiées à Power BI  
 - Modélisation BI et conception d’un dashboard décisionnel  
 
-## Analyses réalisées
+#### Analyses réalisées
 
 - Analyse de la répartition des radars par région, département et commune  
 - Analyse des types de radars (vitesse, feu rouge, vitesse moyenne, etc.)  
@@ -83,20 +84,20 @@ Le projet couvre l’ensemble de la chaîne analytique :
 - Calcul d’indicateurs de densité (ex : radars par zone géographique)  
 - Exploration de la couverture territoriale des dispositifs de contrôle  
 
-## Technologies utilisées
+#### Technologies utilisées
 
 - SQL Server (T-SQL)  
 - Power BI  
 - Excel
 
-## Limites du projet
+#### Limites du projet
 
 - Le fichier source des radars ne contient pas directement la commune  
 - L’enrichissement repose sur une **approximation géographique (commune la plus proche)**  
 - Certaines valeurs sont manquantes ou non exploitables (ex : VMA)  
 - Les correspondances géographiques ne sont pas garanties à 100 %
 
-## Compétences démontrées
+#### Compétences démontrées
 
 - Manipulation de données open data  
 - Nettoyage de données réelles imparfaites  
@@ -107,7 +108,7 @@ Le projet couvre l’ensemble de la chaîne analytique :
 
 **Projet :** [`projects/Analyse_des_radars_en_France/`](projects/Analyse_des_radars_en_France/)
 
-### BoutiqueFR Analytics, Analyse e-commerce de bout en bout (SQL Server ---> Power BI)
+## BoutiqueFR Analytics, Analyse e-commerce de bout en bout (SQL Server ---> Power BI)
 
 Projet d’analyse décisionnelle construit à partir d’une base e-commerce fictive BoutiqueFR, dans le but de simuler une mission réelle de Data Analyst en entreprise.
 
@@ -121,7 +122,7 @@ Le projet couvre l’ensemble de la chaîne analytique :
 - Création de KPIs business
 - Conception d’un dashboard décisionnel
 
-Analyses réalisées :
+#### Analyses réalisées :
 - Analyse du chiffre d’affaires et de l’activité commerciale
 - Analyse des produits et catégories les plus performants
 - Analyse de l’utilisation des coupons promotionnels
@@ -129,20 +130,20 @@ Analyses réalisées :
 - Analyse logistique (transporteurs, frais de port, délais estimés)
 - Détection des produits en risque de rupture de stock
 
-Technologies utilisées :
+#### Technologies utilisées :
 - SQL Server (T-SQL)
 - Power BI
 - Modélisation BI (Star Schema)
 
 **Projet** : [`projects/BoutiqueFR_Analytics/`](projects/BoutiqueFR_Analytics/)
 
-###  OpenMedic (2019–2024), Analyse de la consommation d’antibiotiques  
+##  OpenMedic (2019–2024), Analyse de la consommation d’antibiotiques  
 Analyse complète de la consommation d’antibiotiques en France à partir des données OpenMedic.  
 Inclut : nettoyage, EDA, visualisations avancées, tendances annuelles et insights métiers.
 
 **Projet :** [`projects/openmedic/`](projects/openmedic/)  
 
-###  Call Center Performance Analysis  
+##  Call Center Performance Analysis  
 Analyse décisionnelle de la performance d’un centre d’appels externalisé (2018–2021).  
 
 Inclut :  
