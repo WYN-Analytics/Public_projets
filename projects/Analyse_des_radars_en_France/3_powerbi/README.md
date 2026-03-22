@@ -1,103 +1,84 @@
 # Power BI
-
-## Fichier principal
-
-dashboard_radars.pbix
-
----
-
-## Sources utilisées
-
-Le dashboard s’appuie sur les vues SQL suivantes :
-
-- analyse.vue_radar_detaillee
-- analyse.vue_radars_par_region
-- analyse.vue_radars_par_type
-- analyse.vue_radars_par_annee
-- analyse.vue_radars_par_departement
-
 ---
 
 ## Objectif du dashboard
 
-Le dashboard permet de visualiser :
+Ce dashboard Power BI a pour objectif de :
 
-- la répartition des radars en France
-- la distribution par région et département
-- les types de radars
-- les vitesses maximales autorisées (VMA)
-- l’évolution du nombre de radars dans le temps
-- un indicateur relatif à la population
+- visualiser la répartition des radars en France  
+- analyser leur typologie (vitesse, feu rouge, etc.)  
+- comprendre leur distribution géographique  
+- mettre en perspective les données avec la population  
+- identifier des indicateurs exploitables pour la sécurité routière  
 
----
+## Source des données
 
-## Structure du dashboard
+Le dashboard repose sur des vues SQL préparées en amont issues de la base `Analyse_radars`.
+
+Principales vues utilisées :
+
+- analyse.vue_radars_detaillee  
+- analyse.vue_radars_par_region  
+- analyse.vue_radars_par_departement  
+- analyse.vue_radars_par_type  
+- analyse.vue_radars_par_annee  
+
+## Modélisation Power BI
+
+- Table principale : vue_radars_detaillee (1 ligne = 1 radar)
+- Modèle volontairement simple 
+- Calculs réalisés via DAX + SQL
+
+
+##  Structure du dashboard
 
 ### Page 1 - Vue globale
-
-- Nombre total de radars
-- Nombre de communes concernées
-- Nombre de départements concernés
-- Nombre de régions concernées
-- VMA moyenne
-
----
+- KPI : radars, communes, départements, régions
+- Carte des radars
+- Radars par région
 
 ### Page 2 - Analyse géographique
-
-- Histogramme des radars par région
-- Part des radars par région (%)
-- Histogramme des radars par département
-- Top communes les plus équipées
-
----
-
-### Page 3 - Analyse des radars
-
-- Répartition par type de radar
-- Répartition par VMA
-- Nombre moyen de radars par commune
-
----
-
-### Page 4 - Analyse temporelle
-
-- Nombre de radars par année
-- Évolution des installations
-- Analyse des tendances
-
----
-
-### Page 5 - Analyse population
-
-- Population réelle (corrigée)
+- Radars par département
+- Top 10 départements
 - Radars pour 100 000 habitants
-- Comparaison entre territoires
+
+### Page 3 - Typologie
+- Types de radars
+- Radars feu rouge / vitesse moyenne
+- Analyse VMA
+
+### Page 4 - Évolution
+- Radars par année
+- Courbe temporelle
+
+### Page 5 - Qualité des données
+- Taux de VMA manquante
+- Message qualité
 
 ---
 
-## Mesures importantes utilisées
+##  Mesures DAX
 
-- Nombre de radars
-- Nombre de communes
-- Population réelle (corrigée)
-- Radars pour 100 000 habitants
-- VMA moyenne
-- Part des radars par région
+Voir fichier : mesures_dax.md
 
----
+##  Limites
 
-## Limite importante
+- Rattachement commune approximatif (distance)
+- Population dupliquée (corrigée en DAX)
+- Données VMA manquantes
 
-La population est répétée pour chaque radar dans la table enrichie.
+##  Apports
 
-Une mesure DAX spécifique est utilisée pour corriger ce problème et éviter les doublons.
+- Indicateurs métiers pertinents
+- Analyse géographique
+- Transparence sur les limites
 
----
 
-## Objectif final
+##  Améliorations
 
-Fournir un dashboard clair, lisible et exploitable permettant de comprendre rapidement la répartition des radars en France.
+- Ajout données accidents
+- Modèle en étoile
+- Calcul distance avancé
 
 ---
 
