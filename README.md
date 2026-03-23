@@ -59,7 +59,7 @@ Projets incluant :
 ---
 
 
-## Analyse des radars fixes en France (SQL Server → Power BI)
+## Analyse des radars fixes en France 
 
 Projet d’analyse décisionnelle basé sur les données open data des radars fixes en France (data.gouv), enrichies avec des données géographiques des communes.
 L’objectif est de simuler une mission de Data Analyst dans un contexte de **pilotage de la sécurité routière et de la couverture territoriale des dispositifs de contrôle**.
@@ -108,7 +108,7 @@ Le projet couvre l’ensemble de la chaîne analytique :
 
 **Projet :** [`projects/Analyse_des_radars_en_France/`](projects/Analyse_des_radars_en_France/)
 
-## BoutiqueFR Analytics, Analyse e-commerce de bout en bout (SQL Server ---> Power BI)
+## BoutiqueFR Analytics, Analyse e-commerce
 
 Projet d’analyse décisionnelle construit à partir d’une base e-commerce fictive BoutiqueFR, dans le but de simuler une mission réelle de Data Analyst en entreprise.
 
