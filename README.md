@@ -59,7 +59,7 @@ Projets incluant :
 ---
 
 
-## Analyse des radars automatiques en France (SQL Server → Power BI)
+## Analyse des radars fixes en France (SQL Server → Power BI)
 
 Projet d’analyse décisionnelle basé sur les données open data des radars fixes en France (data.gouv), enrichies avec des données géographiques des communes.
 L’objectif est de simuler une mission de Data Analyst dans un contexte de **pilotage de la sécurité routière et de la couverture territoriale des dispositifs de contrôle**.
