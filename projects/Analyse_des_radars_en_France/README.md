@@ -1,6 +1,4 @@
-# Analyse des radars en France
-
-# Analyse des radars en France
+# Analyse des radars fixes en France
 
 ## Objectif
 
@@ -11,6 +9,7 @@ Ce projet a pour objectif d’analyser la répartition des radars fixes en Franc
 - SQL Server
 - T-SQL
 - Power BI
+- Excel 
 
 ## Organisation de la base
 
