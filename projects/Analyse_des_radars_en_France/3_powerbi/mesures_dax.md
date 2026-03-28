@@ -1,58 +1,50 @@
-# 📊 Mesures DAX — Projet Radars France
+# Mesures DAX - Projet Radars France 
 
-Ce document présente l’ensemble des mesures DAX utilisées dans le dashboard Power BI du projet d’analyse des radars automatiques en France.
+Ce document présente les mesures DAX utilisées dans le dashboard Power BI.
 
----
+Chaque mesure est accompagnée d’un commentaire expliquant :
+- son rôle
+- sa logique
+- les éventuels pièges (très important en BI)
 
-#  Indicateurs principaux
 
-### Nombre de radars
+##  1. Indicateurs principaux
 
 ```DAX
 Nombre de radars =
 COUNTROWS('vue_radars_detaillee')
+
+-- Compte le nombre total de lignes dans la table
+-- Chaque ligne représente un radar
+-- => indicateur principal du volume de données
 ```
-
-> Compte le nombre total de radars présents dans la base.
-
----
-
-### Nombre de communes
 
 ```DAX
 Nombre de communes =
 DISTINCTCOUNT('vue_radars_detaillee'[nom_commune])
+
+-- Compte le nombre de communes distinctes
+-- Permet d’identifier la couverture territoriale
 ```
-
-> Compte le nombre de communes distinctes dans lesquelles au moins un radar est présent.
-
----
-
-### Nombre de départements
 
 ```DAX
 Nombre de départements =
 DISTINCTCOUNT('vue_radars_detaillee'[nom_departement])
+
+-- Compte les départements distincts
+-- Utilisé pour mesurer la diffusion géographique
 ```
-
-> Compte le nombre de départements distincts.
-
----
-
-### Nombre de régions
 
 ```DAX
 Nombre de régions =
 DISTINCTCOUNT('vue_radars_detaillee'[nom_region])
+
+-- Compte les régions distinctes présentes
+-- KPI utilisé en vue d’ensemble
 ```
 
-> Compte le nombre de régions distinctes.
 
----
-
-# Analyse des radars
-
-### Nombre de radars feu rouge
+##  2. Analyse des radars
 
 ```DAX
 Nombre de radars feu rouge =
@@ -60,13 +52,10 @@ CALCULATE(
     [Nombre de radars],
     'vue_radars_detaillee'[type_radar] = "ETFR"
 )
+
+-- Filtre la table pour ne garder que les radars feu rouge
+-- CALCULATE modifie le contexte de filtre
 ```
-
-> Compte le nombre de radars de type feu rouge.
-
----
-
-### Nombre de radars vitesse moyenne
 
 ```DAX
 Nombre de radars vitesse moyenne =
@@ -74,13 +63,14 @@ CALCULATE(
     [Nombre de radars],
     'vue_radars_detaillee'[type_radar] = "ETVM"
 )
-```
 
-> Compte le nombre de radars de type vitesse moyenne.
+-- Même logique que ci-dessus
+-- Permet de segmenter les types de radars
+```
 
 ---
 
-### Nombre de radars sans VMA
+## 3. Indicateurs VMA
 
 ```DAX
 Nombre de radars sans VMA =
@@ -88,26 +78,20 @@ CALCULATE(
     [Nombre de radars],
     ISBLANK('vue_radars_detaillee'[vma])
 )
+
+-- Identifie les valeurs manquantes
+-- Très important pour la qualité des données
 ```
-
-> Compte le nombre de radars dont la vitesse maximale autorisée est manquante.
-
----
-
-### VMA moyenne
 
 ```DAX
-VMA moyenne =
-AVERAGE('vue_radars_detaillee'[vma])
+Nombre de radars avec VMA =
+CALCULATE(
+    [Nombre de radars],
+    NOT ISBLANK('vue_radars_detaillee'[vma])
+)
+
+-- Permet de mesurer la partie exploitable des données
 ```
-
-> Calcule la vitesse maximale autorisée moyenne (hors valeurs manquantes).
-
----
-
-#  Indicateurs de qualité des données
-
-### Taux de VMA manquante (%)
 
 ```DAX
 Taux de VMA manquante (%) =
@@ -116,26 +100,37 @@ DIVIDE(
     [Nombre de radars],
     0
 )
+
+-- Ratio de qualité de donnée
+-- DIVIDE évite les erreurs de division par 0
 ```
-
-> Permet d’évaluer la qualité de la donnée VMA.
-
----
-
-### Message qualité des données
 
 ```DAX
-Message qualité des données =
-"Le rattachement radar-commune est une approximation géographique. La population a été retraitée pour éviter les doubles comptes dans les indicateurs."
+VMA moyenne =
+AVERAGE('vue_radars_detaillee'[vma])
+
+-- Moyenne simple
+-- Les valeurs NULL sont automatiquement ignorées
 ```
 
-> Message informatif affiché dans le dashboard pour expliciter les limites du projet.
+```DAX
+VMA moyenne corrigée =
+AVERAGEX(
+    FILTER(
+        'vue_radars_detaillee',
+        NOT ISBLANK('vue_radars_detaillee'[vma])
+    ),
+    'vue_radars_detaillee'[vma]
+)
+
+-- Version plus explicite
+-- Filtre les valeurs NULL avant calcul
+-- Bonne pratique pour être clair en entretien
+```
 
 ---
 
-# Indicateurs démographiques
-
-### Population réelle
+## 4. Indicateurs démographiques
 
 ```DAX
 Population réelle =
@@ -143,14 +138,30 @@ SUMX(
     VALUES('vue_radars_detaillee'[nom_commune]),
     MAX('vue_radars_detaillee'[population])
 )
+
+-- PROBLÈME :
+-- La population est répétée pour chaque radar
+
+-- SOLUTION :
+-- VALUES → liste unique des communes
+-- MAX → prend une seule population par commune
+
+-- => évite le double comptage
 ```
 
-> La population est répétée pour chaque radar dans une même commune.  
-> Cette mesure permet d’éviter les doubles comptes en ne prenant qu’une seule valeur par commune.
+```DAX
+Population totale (fixe) =
+CALCULATE(
+    [Population réelle],
+    ALL('vue_radars_detaillee')
+)
 
----
+-- Supprime tous les filtres
+-- Permet d’avoir une population constante
 
-### Radars pour 100 000 habitants
+-- Utile pour :
+-- KPI globaux qui ne doivent pas bouger avec les slicers
+```
 
 ```DAX
 Radars pour 100 000 habitants =
@@ -159,13 +170,25 @@ DIVIDE(
     [Population réelle],
     0
 ) * 100000
+
+-- Indicateur de densité
+-- Permet de comparer les territoires entre eux
 ```
 
-> Indicateur clé permettant de comparer la densité de radars entre territoires.
+```DAX
+Radars pour 100 000 habitants (fixe) =
+DIVIDE(
+    [Nombre de radars],
+    [Population totale (fixe)],
+    0
+) * 100000
 
----
+-- Version stable
+-- Ignore les filtres → évite incohérences
 
-### Nombre moyen de radars par commune
+-- Utilisation :
+-- Page "Vue d’ensemble"
+```
 
 ```DAX
 Nombre moyen de radars par commune =
@@ -174,15 +197,12 @@ DIVIDE(
     [Nombre de communes],
     0
 )
+
+-- Mesure la concentration moyenne
+-- Donne une idée de la densité locale
 ```
 
-> Permet d’évaluer la concentration moyenne des radars.
-
----
-
-# Indicateurs de répartition
-
-### Part des radars par région (%)
+## 5. Répartition
 
 ```DAX
 Part des radars par région (%) =
@@ -194,33 +214,32 @@ DIVIDE(
     ),
     0
 )
+
+-- Compare la part d’une région au total national
+-- ALL supprime les filtres → référence globale
 ```
 
-> Calcule la part des radars d’une région par rapport au total national, indépendamment des filtres actifs.
+##  6. Qualité des données
 
----
+```DAX
+Message qualité des données =
+"Le rattachement radar/commune est une approximation géographique. La population a été retraitée pour éviter les doubles comptes. La VMA n’est pas renseignée pour certains types de radars."
 
-# Remarque importante
+-- Message affiché dans le dashboard
+-- Permet d’expliquer les limites du dataset
+-- Très apprécié en entretien (transparence)
+```
 
-La table `vue_radars_detaillee` contient une ligne par radar.  
-La population étant associée à chaque radar lors de l’enrichissement géographique, elle est donc répétée plusieurs fois.
-
- Une mesure spécifique (`Population réelle`) a été créée pour corriger ce biais.
-
----
-
-# Conclusion
+## Conclusion
 
 Ces mesures permettent :
 
-- d’analyser la répartition géographique des radars
-- de comprendre leur typologie
-- d’évaluer la qualité des données
-- de produire des indicateurs comparables entre territoires
+- une analyse fiable malgré les biais de données  
+- une bonne gestion des filtres Power BI  
+- une lecture claire pour un utilisateur métier  
 
 ---
-
 ## Auteur 
 
-** WYN Analytics**  
+**Wilfried YA. WYN Analytics**  
 Data Analyst • SQL • Python • Excel • Power BI 
