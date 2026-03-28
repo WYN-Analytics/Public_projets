@@ -2,7 +2,12 @@
 
 ## Objectif
 
-Ce projet a pour objectif d’analyser la répartition des radars fixes en France à partir de données open data.
+Ce projet a pour objectif d’analyser la répartition des radars fixes en France à partir de données open data. Il couvre l’ensemble de la chaîne analytique, depuis l’import des fichiers CSV jusqu’à la création d’un dashboard Power BI interactif.
+
+L’objectif est double :
+- produire une analyse territoriale claire et exploitable
+- démontrer une démarche de Data Analyst structurée, documentée et transparente sur les limites du dataset.
+
 
 ## Technologies utilisées
 
@@ -15,8 +20,8 @@ Ce projet a pour objectif d’analyser la répartition des radars fixes en Franc
 
 Le projet utilise deux schémas :
 
-- `brut` : données importées sans transformation
-- `analyse` : données nettoyées, enrichies et prêtes à être analysées
+- `brut` : stockage des données importées sans transformation
+- `analyse` : dstockage des données nettoyées, enrichies et prêtes à être analysées
 
 Tables principales :
 
@@ -27,10 +32,10 @@ Tables principales :
 ## Questions métier analysées
 
 - Combien y a-t-il de radars fixes en France ?
-- Quels types de radars sont les plus présents ?
+- Quels types de radars sont les plus représentés ?
 - Quelles régions concentrent le plus de radars ?
 - Quels départements sont les plus équipés ?
-- Quelle est la répartition des VMA ?
+- Quelle est la répartition des vitesses maximales autorisées (VMA) ?
 - Comment évoluent les installations dans le temps ?
 - Quel est le niveau d’équipement rapporté à la population ?
 
@@ -65,7 +70,11 @@ Analyse_des_radars_en_France
 │   └── methodologie.md
 │
 └── 5_images
-    └── dashboard.png
+│   ├── 1-Vue_genarale.png
+│   ├── 2-Vue_d_ensemble.png
+│   ├── 3-Analyse_territoriale.png
+│   ├── 4-Analyse_des_types_de_radars.png
+│   └── 5-Analyse_temporelle.png
 
 
 ## Limite importante
@@ -73,19 +82,21 @@ Analyse_des_radars_en_France
 - Le fichier des radars ne contient pas directement la commune, l’enrichissement géographique va donc reposer sur la commune dont le centre est le plus proche des coordonnées du radar. C’est une approximation raisonnable ce n’est pas un géocodage administratif officiel, chaque radar est associé à la commune dont le centroïde est le plus proche.
 - Le champ `VMA ` contient des valeurs manquantes : **678 lignes**.
 - Le projet analyse la **répartition** des radars, pas leur efficacité réelle sur l’accidentologie, car aucune donnée d’accident n’est fournie ici.
+- La population est répétée pour chaque radar dans la table enrichie. Ce biais est corrigé dans Power BI via une mesure DAX dédiée.
 - Le dataset des radars contient une date maximale observée de **2025-12-30**. Cela correspond au fichier fourni et doit être présenté comme une observation du jeu de données, sans surinterprétation.
 
 ---
 
-## Étapes du projet
+## Étapes du projet  
 
-1. Import des données brutes  
-2. Nettoyage des données  
-3. Enrichissement géographique  
-4. Requêtes analytiques SQL  
-5. Création de vues pour Power BI  
-6. Création d’un dashboard interactif  
-
+1. Import des données brutes
+2. Création de la base et des schémas SQL
+3. Nettoyage et normalisation des colonnes
+4. Enrichissement géographique par commune la plus proche
+5. Création de requêtes analytiques SQL
+6. Création de vues dédiées à Power BI
+7. Construction des mesures DAX
+8. Création d’un dashboard interactif
 ---
 
 ## Travaux réalisés
@@ -105,43 +116,64 @@ Analyse_des_radars_en_France
 
 ##  Structure du dashboard
 
-### Page 1 - Vue globale
-- KPI : radars, communes, départements, régions
-- Carte des radars
-- Radars par région
+Le dashboard Power BI est structuré en plusieurs pages permettant une lecture progressive : vue globale, analyse détaillée et exploration des données.
 
-### Page 2 - Analyse géographique
-- Radars par département
-- Top 10 départements
-- Radars pour 100 000 habitants
+### Page 1 - Vue d’ensemble
+Cette page donne une lecture immédiate du parc de radars fixes en France.
 
-### Page 3 - Typologie
-- Types de radars
-- Radars feu rouge / vitesse moyenne
-- Analyse VMA
+Contenu :
+- nombre total de radars
+- nombre de régions équipées
+- nombre de départements équipés
+- nombre de communes équipées
+- VMA moyenne
+- densité de radars pour 100 000 habitants
+- répartition des radars par région
+- carte de localisation des radars
+- répartition des types de radars
+- bloc qualité des données
 
-### Page 4 - Évolution
-- Radars par année
-- Courbe temporelle
+### Page 2 - Analyse territoriale
+Cette page permet de comparer les territoires entre eux.
 
-### Page 5 - Qualité des données
-- Taux de VMA manquante
-- Message qualité
+Contenu :
+- répartition des radars par département
+- indicateur de densité territoriale
+- comparaisons par région et département
+- lecture géographique plus fine
+
+### Page 3 - Analyse des types de radars
+Cette page permet d’identifier les catégories les plus représentées et d’examiner leur lien avec la VMA.
+
+Contenu :
+- répartition des radars par type
+- indicateurs par catégorie
+- analyse de la VMA
+- lecture des valeurs manquantes
+
+### Page 4 - Analyse temporelle
+Cette page permet d’observer l’évolution des mises en service.
+
+Contenu :
+- nombre de radars par année
+- lecture chronologique du déploiement
+- analyse complémentaire dans le temps
 
 ---
 
 ## Compétences démontrées
 
-- Import de fichiers CSV  
-- Nettoyage de données  
-- Conversion de types en SQL  
-- Requêtes analytiques simples  
-- Utilisation de `CROSS APPLY`  
-- Enrichissement géographique  
-- Création de vues SQL  
-- Création de mesures DAX  
-- Construction d’un dashboard Power BI  
-- Documentation d’un projet data  
+- import de fichiers CSV
+- modélisation simple en SQL Server
+- nettoyage et normalisation de données
+- conversion de types
+- enrichissement géographique
+- utilisation de CROSS APPLY
+- création de requêtes analytiques
+- création de vues SQL pour un usage BI
+- création de mesures DAX
+- construction d’un dashboard Power BI
+- documentation et transparence sur les limites du dataset
 
 ---
 
@@ -149,12 +181,13 @@ Analyse_des_radars_en_France
 
 Le projet permet d’identifier :
 
-- les régions les plus équipées  
-- les départements les plus équipés  
-- les types de radars les plus fréquents  
-- les VMA (vitesse maximale autorisée) les plus présentes  
-- la répartition des radars dans le temps  
-- un niveau d’équipement relatif à la population  
+- les régions les plus équipées
+- les départements les plus équipés
+- les types de radars les plus fréquents
+- la distribution des VMA renseignées
+- la part de données VMA manquantes
+- l’évolution des radars dans le temps
+- un niveau d’équipement rapporté à la population
 
 ---
 
