@@ -148,5 +148,5 @@ Plusieurs prolongements sont envisageables :
 
 ## Auteur
 
-**Wilfried YA. — WYN Analytics**  
+**Wilfried YA.- WYN Analytics**  
 Data Analyst • SQL • Python • Excel • Power BI
