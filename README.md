@@ -89,6 +89,7 @@ Le projet couvre l’ensemble de la chaîne analytique :
 - SQL Server (T-SQL)  
 - Power BI  
 - Excel
+- Power Query
 
 #### Limites du projet
 
@@ -133,7 +134,8 @@ Le projet couvre l’ensemble de la chaîne analytique :
 #### Technologies utilisées :
 - SQL Server (T-SQL)
 - Power BI
-- Modélisation BI (Star Schema)
+- Excel
+- Power Query
 
 **Projet** : [`projects/BoutiqueFR_Analytics/`](projects/BoutiqueFR_Analytics/)
 
