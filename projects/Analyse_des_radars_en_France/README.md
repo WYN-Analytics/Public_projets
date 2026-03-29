@@ -15,6 +15,7 @@ L’objectif est double :
 - T-SQL
 - Power BI
 - Excel 
+- Power Query
 
 ## Organisation de la base
 
