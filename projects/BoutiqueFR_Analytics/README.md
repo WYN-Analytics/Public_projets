@@ -17,8 +17,8 @@ Ce projet consiste à analyser les données d’un site e-commerce fictif afin d
 
 - SQL Server (T-SQL)
 - Power BI
-- Modélisation dimensionnelle
-- Analyse de données
+- Excel 
+- Power Query 
 
 ---
 
