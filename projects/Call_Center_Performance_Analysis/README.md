@@ -44,7 +44,7 @@ Le rapport est structuré pour un directeur régional :
 
 ##  Compétences mobilisées
 
-- Power Query (ETL)  
+- Power Query 
 - Modélisation relationnelle  
 - DAX (colonnes calculées et mesures)  
 - Data storytelling  
