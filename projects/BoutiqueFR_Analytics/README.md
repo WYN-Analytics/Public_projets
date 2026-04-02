@@ -15,7 +15,7 @@ Ce projet consiste à analyser les données d’un site e-commerce fictif afin d
 
 ##  Technologies utilisées
 
-- SQL Server (T-SQL)
+- SQL Server 
 - Power BI
 - Excel 
 - Power Query 
@@ -48,7 +48,7 @@ La base BoutiqueFR est organisée par schémas métier :
 
 
 ##  Structure du projet
-
+```bash
 BoutiqueFR_Analytics/
 │
 ├── 1_donnees/
